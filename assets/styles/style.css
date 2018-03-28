@@ -1,7 +1,6 @@
 html {
     position: relative;
     display: block;
-    background-color: rgb(93, 60, 246);
 }
 
 body {
@@ -28,6 +27,12 @@ a {
 img {
     width: inherit;
     vertical-align: middle;
+}
+
+input, textarea {
+    color: rgb(119, 119, 119);
+    border: none;
+    outline: none;
 }
 
 button {
@@ -82,18 +87,32 @@ body, a, b, p, h1, h2, h3, h4, h5, h6, span, del, button, data-label {
     -webkit-text-size-adjust: 100%;
 }
 
-/* Typography: Heading */
-
-h1 {
+h1, h2, h3 {
     color: rgb(93, 60, 246);
     font-family: "ITC Avant Garde Std", sans-serif;
     font-weight: bold;
+    letter-spacing: -.05em;
+    text-align: center;
+}
+
+h1 {
     font-size: 2.5em;
     line-height: 115%;
-    letter-spacing: -.05em;
 }
 
 h2 {
+    font-size: 2em;
+    line-height: 67%;
+    margin-bottom: 1em;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+h1 + p {
+    margin-top: .15em;
     color: rgb(158, 119, 255);
     font-family: "Selphia Script", sans-serif;
     font-weight: normal;
@@ -104,20 +123,6 @@ h2 {
     -ms-transform: rotate(-2deg);
     -o-transform: rotate(-2deg);
     transform: rotate(-2deg);
-}
-
-h3 {
-    color: rgb(93, 60, 246);
-    font-family: "ITC Avant Garde Gothic Pro", sans-serif;
-    font-weight: bold;
-    font-size: 1.333em;
-    line-height: 1.333em;
-    text-align: left;
-    letter-spacing: -.05em;
-}
-
-h1 + h2 {
-    margin-top: .15em;
 }
 
 /* Structure */
@@ -158,7 +163,7 @@ nav .logo {
 header {
     padding: 6em 0;
     text-align: center;
-    background: linear-gradient(0deg, rgb(240, 243, 245) 0%, white 50%);
+    background-image: linear-gradient(0deg, rgb(240, 243, 245) 0%, white 50%);
 }
 
 header .hero {
@@ -168,12 +173,13 @@ header .hero {
 /* Main */
 
 main {
-    text-align: center;
+    padding-bottom: 15em;
 }
 
 main section {
     height: auto;
     margin-top: 5em;
+    text-align: center;
 }
 
 main section::after {
@@ -182,45 +188,167 @@ main section::after {
     clear: both;
 }
 
-main section > * {
+main section.introduction {
+    margin-top: -4em;
+}
+
+main section.information > * {
     display: block;
     float: left;
     height: auto;
 }
 
-main section > *:first-child {
+main section.information > *:first-child {
     margin-right: 5%;
 }
 
-main section > .code {
+main section.information > .code {
     width: 47.5%;
 }
 
-main section > .code:first-child h3 {
+main section.information > .code:first-child h3 {
     margin-left: 0;
     margin-right: .25em;
     text-align: right;
 }
 
-main section > .code h3 {
+main section.information > .code h3 {
+    margin-top: 1em;
     margin-bottom: .75em;
     margin-left: .25em;
     text-align: left;
 }
 
-main section > .preview {
+main section.information > .preview {
     overflow: hidden;
     width: 42.5%;
     border-radius: 1em;
 }
 
-main section > .preview img {
+main section.information > .preview img {
     width: 100%;
     height: auto;
 }
 
-main section > .preview:first-child {
+main section.information > .preview:first-child {
     margin-left: 5%;
+}
+
+section.promotion {
+    position: relative;
+    padding: 4em;
+    text-align: center;
+    background-image: linear-gradient(rgb(158, 119, 255) 0%, rgb(93, 60, 246) 100%);
+}
+
+section.promotion::before {
+    content: "";
+    display: block;
+    top: -8.5em;
+    left: 50%;
+    width: 7.5em;
+    height: 8.5em;
+    margin-left: -3.75em;
+    background-image: url(../images/identity/mascot.png);
+    background-position: top center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+section.promotion h2 {
+    color: white;
+    margin-bottom: .25em;
+}
+
+section.promotion p {
+    color: white;
+    font-size: 1.2em;
+}
+
+section.promotion input {
+    width: 20em;
+    height: 3em;
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-right: 4em;
+    font-size: .9em;
+    line-height: 3em;
+    text-align: left;
+    background-color: white;
+    border: none;
+    border-radius: .25em;
+    box-shadow: 0 .25em .5em 0 rgba(0, 0, 0, .05);
+    transition: box-shadow .35s ease;
+}
+
+section.promotion input:hover {
+    box-shadow: 0 .5em 1em 0 rgba(0, 0, 0, .25);
+}
+
+section.promotion input:focus {
+    box-shadow: 0 .5em 1em 0 rgba(0, 0, 0, .25);
+}
+
+section.promotion input::placeholder {
+    opacity: .5;
+}
+
+section.indication {
+    padding: 4em 0;
+}
+
+section.indication .brand {
+    width: 15em;
+    margin: 0 auto;
+}
+
+section.indication .brand .logo {
+    width: 90%;
+    margin-right: 10%;
+}
+
+section.indication .brand p {
+    margin-top: -1.3em;
+    margin-left: 2.6em;
+    color: rgb(158, 119, 255);
+    font-family: "Selphia Script", sans-serif;
+    font-weight: normal;
+    font-size: 1.3em;
+    line-height: 67%;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+
+section.indication .note {
+    width: 55%;
+    margin: 0 auto;
+    margin-top: 4em;
+}
+
+section.indication .note::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+section.indication .note > * {
+    float: left;
+}
+
+section.indication .note .logo {
+    width: 3em;
+    height: 3em;
+}
+
+section.indication .note p {
+    width: calc(100% - 4em);
+    height: 3em;
+    margin-left: 1em;
+    line-height: 1.5em;
 }
 
 footer {
@@ -232,8 +360,11 @@ footer {
 /* Code */
 
 code {
+    overflow: hidden;
     display: block;
+    position: relative;
     color: white;
+    font-family: "Barlow", sans-serif;
     font-size: .9em;
     line-height: 1.65em;
     text-align: left;
@@ -242,16 +373,72 @@ code {
     border-radius: 1em;
 }
 
-code.main {
+code.major {
     display: inline-block;
     width: auto;
-    margin-top: -4em;
     font-size: 1em;
-    background-image: linear-gradient(0deg, rgb(93, 60, 246) -100%, rgb(158, 119, 255) 100%);
-    box-shadow: 0 10px 20px 0 rgba(93, 60, 246, .35);
+    background-image: linear-gradient(rgb(158, 119, 255) 0%, rgb(93, 60, 246) 200%);
+    box-shadow: 0 .5em 1em 0 rgba(93, 60, 246, .35);
 }
 
-code.main xmp {
+code.major.tabbed xmp {
+    padding-top: 4.5em;
+}
+
+code.tabbed .options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+}
+
+code.tabbed .options::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+code.tabbed .options a {
+    box-sizing: border-box;
+    float: left;
+    width: 25%;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    letter-spacing: 0;
+    background-image: linear-gradient(0deg, rgba(93, 60, 246, .5) 0%, transparent 75%);
+    border-right: 1px solid rgba(0, 0, 0, .075);
+    border-bottom: 1px solid rgba(0, 0, 0, .075);
+    border-left: 1px solid rgba(0, 0, 0, .075);
+    box-shadow: inset 0 -.1em .05em 0 rgba(93, 60, 246, .25);
+}
+
+code.tabbed .options a:first-child {
+    border-left: none !important;
+}
+
+code.tabbed .options a:last-child {
+    border-right: none !important;
+}
+
+code.tabbed .options a.active {
+    box-shadow: none;
+    background-image: none;
+    background-image: linear-gradient(rgba(255, 255, 255, .2) 0%, transparent 100%);
+    border-bottom: none;
+    box-shadow: 0 -.15em .15em 0 rgba(0, 0, 0, .075);
+}
+
+code.tabbed xmp {
+    display: none;
+}
+code.tabbed xmp.active {
+    display: block;
+}
+
+code.major xmp {
     border: .2em solid rgba(255, 255, 255, .1);
 }
 
@@ -268,5 +455,5 @@ code + button {
     color: rgb(93, 60, 246);
     border: 4px solid rgb(93, 60, 246);
     border-radius: .5em;
-    box-shadow: 0 0.15em 0.05em 0 rgba(93,60,246,0.15);
+    box-shadow: 0 .15em .05em 0 rgba(93, 60, 246, .15);
 }
