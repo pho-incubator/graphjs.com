@@ -58,7 +58,7 @@ button[disabled], button[disabled="true"] {
 
 *::selection {
     text-shadow: none;
-    background-color: rgba(255, 255, 0, .5);
+    background-color: rgb(255, 255, 127);
 }
 
 /* Typography */
@@ -225,6 +225,11 @@ main section.information > .preview {
     border-radius: 1em;
 }
 
+main section.information > .preview > div {
+    width: 100%;
+    padding-bottom: 100%;
+}
+
 main section.information > .preview img {
     width: 100%;
     height: auto;
@@ -292,6 +297,11 @@ section.promotion input:focus {
 
 section.promotion input::placeholder {
     opacity: .5;
+    transition: opacity .35 ease;
+}
+
+section.promotion input:focus::placeholder {
+    opacity: .25;
 }
 
 section.indication {
@@ -446,7 +456,7 @@ code xmp {
     margin: 0;
     padding: 1.5em 2.25em;
     font-family: "Barlow", sans-serif;
-    border-radius: inherit;
+    border-radius: 1em;
 }
 
 code + button {

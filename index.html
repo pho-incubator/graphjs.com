@@ -64,78 +64,167 @@
 				</section>
 				<section class="information">
 					<div class="preview">
-						<img src="assets/images/content/sample.png" />
+						<div class="slider" data-simple-slider>
+							<img src="assets/images/content/auth-state_standalone.png" />
+							<img src="assets/images/content/auth-state_inline.png" />
+							<img src="assets/images/content/auth-register.png" />
+							<img src="assets/images/content/auth-login.png" />
+							<img src="assets/images/content/alert.png" />
+						</div>
 					</div>
 					<div class="code">
 						<h3>
 							Add login and logout
 							<br />
-							in single line of code.
+							in single line of code!
 						</h3>
 						<code>
 <!-- Code begins -->
-<xmp><graphjs-auth default="login"></xmp>
+<xmp>//Login Box
+<graphjs-auth default="login">
+
+//Authentication State
+<graphjs-state></xmp>
 <!-- Code ends -->
 						</code>
 					</div>
 				</section>
+				<!-- GROUPS
 				<section class="information">
 					<div class="code">
 						<h3>
 							Create groups and
 							<br />
-							embed members widget.
+							embed members widget!
 						</h3>
 						<code>
-<!-- Code begins -->
+
 <xmp><graphjs-group-members>
 	<graphjs-profile-card id="7346217961" />
 	<graphjs-profile-card id="8768732124" />
 	<graphjs-profile-card id="1236217836" />
-	<graphjs-profile-card id="5232719377" />
 </graphjs-group-members></xmp>
-<!-- Code ends -->
+
 						</code>
 					</div>
 					<div class="preview">
-						<img src="assets/images/content/sample.png" />
+						<div class="slider" data-simple-slider>
+							<img src="assets/images/content/auth-state_inline.png" />
+							<img src="assets/images/content/auth-state_standalone.png" />
+							<img src="assets/images/content/auth-register.png" />
+							<img src="assets/images/content/auth-login.png" />
+						</div>
 					</div>
 				</section>
-				<section class="information">
-					<div class="preview">
-						<img src="assets/images/content/sample.png" />
-					</div>
-					<div class="code">
-						<h3>
-							All pages get comment section!
-						</h3>
-						<code>
-<!-- Code begins -->
-<xmp><graphjs-comment max="20"></xmp>
-<!-- Code ends -->
-						</code>
-					</div>
-				</section>
+				-->
 				<section class="information">
 					<div class="code">
 						<h3>
-							Easily create profiles.
+							Easily create profiles!
 						</h3>
 						<code>
 <!-- Code begins -->
 <xmp><script>
 	Pho.setProfile(
-		'AnthonyPatton',
-		'anthonyp@geemail.com',
-		'Just another World traveler',
-		'25/12/1994'
+		'KarenMorgan',
+		'karenmorgan@geemail.com',
+		'I am a badass UX designer working in tech.',
+		'06/10/1990'
 	);
 </script></xmp>
 <!-- Code ends -->
 						</code>
 					</div>
 					<div class="preview">
-						<img src="assets/images/content/sample.png" />
+						<div class="slider" data-simple-slider>
+							<img src="assets/images/content/profile_introduction.png" />
+							<img src="assets/images/content/profile-card.png" />
+							<img src="assets/images/content/profile.png" />
+						</div>
+					</div>
+				</section>
+				<section class="information">
+					<div class="preview">
+						<div class="slider" data-simple-slider>
+							<img src="assets/images/content/comments_introduction.png" />
+							<img src="assets/images/content/comments_inline.png" />
+							<img src="assets/images/content/comments_standalone.png" />
+						</div>
+					</div>
+					<div class="code">
+						<h3>
+							Add comment section
+							<br />
+							to any page you want!
+						</h3>
+						<code>
+<!-- Code begins -->
+<xmp><graphjs-comments max="20"></xmp>
+<!-- Code ends -->
+						</code>
+					</div>
+				</section>
+				<section class="information">
+					<div class="code">
+						<h3>
+							Add messaging between users!
+						</h3>
+						<code>
+<!-- Code begins -->
+<xmp><graphjs-messages /></xmp>
+<!-- Code ends -->
+						</code>
+					</div>
+					<div class="preview">
+						<div class="slider" data-simple-slider>
+							<img src="assets/images/content/messages_introduction.png" />
+							<img src="assets/images/content/messages_mobile.png" />
+							<img src="assets/images/content/messages.png" />
+						</div>
+					</div>
+				</section>
+				<section class="information">
+					<div class="preview">
+						<div class="slider" data-simple-slider>
+							<img src="assets/images/content/forum-list.png" />
+							<img src="assets/images/content/forum-thread.png" />
+							<img src="assets/images/content/forum-compose.png" />
+						</div>
+					</div>
+					<div class="code">
+						<h3>
+							Create a community forum!
+						</h3>
+						<code>
+<!-- Code begins -->
+<xmp><graphjs-forum /></xmp>
+<!-- Code ends -->
+						</code>
+					</div>
+				</section>
+				<section class="information">
+					<div class="code">
+						<h3>
+							Measure your content
+							<br />
+							with user interaction.
+						</h3>
+						<code>
+<!-- Code begins -->
+<xmp>//Buttons on any page
+<graphjs-bookmark-button />
+
+//List favorite site content
+<graphjs-bookmark-list type="global" />
+</xmp>
+<!-- Code ends -->
+						</code>
+					</div>
+					<div class="preview">
+						<div class="slider" data-simple-slider>
+							<img src="assets/images/content/bookmark-list_global-introduction.png" />
+							<img src="assets/images/content/bookmark-button.png" />
+						</div>
 					</div>
 				</section>
 				<section>
@@ -203,5 +292,21 @@
 				built with love by GROU.PS Inc.
 			</div>
 		</footer>
+		<script src="https://rawgit.com/ruyadorno/simple-slider/master/dist/simpleslider.min.js"></script>
+		<script>
+			var sliders = document.getElementsByClassName('slider');
+			console.log(sliders);
+			for(i = 0; i < sliders.length; i++) {
+				simpleslider.getSlider({
+					container: sliders[i],
+					transitionTime: 1,
+					delay: 3.5,
+					init: 100,
+					show: 0,
+					end: -100,
+					unit: '%',
+				});
+			}
+		</script>
 	</body>
 </html>
