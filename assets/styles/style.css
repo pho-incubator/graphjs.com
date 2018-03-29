@@ -6,7 +6,7 @@ html {
 body {
     color: rgb(119, 119, 119);
     font-family: "Barlow", sans-serif;
-    font-size: 21px;
+    font-size: 18px;
     background-color: white;
 }
 
@@ -81,6 +81,12 @@ button[disabled], button[disabled="true"] {
     src: url("../fonts/Barlow-Regular.woff") format("woff");
 }
 
+@font-face {
+    font-family: "Droid Sans";
+    font-weight: normal;
+    src: url("../fonts/DroidSans-Mono.woff") format("woff");
+}
+
 body, a, b, p, h1, h2, h3, h4, h5, h6, span, del, button, data-label {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -128,7 +134,8 @@ h1 + p {
 /* Structure */
 
 .container {
-    width: 1080px;
+    width: 90%;
+    max-width: 1080px;
     margin: 0 auto;
 }
 
@@ -198,18 +205,34 @@ main section.information > * {
     height: auto;
 }
 
-main section.information > *:first-child {
-    margin-right: 5%;
+main section.information:nth-of-type(odd) > * {
+    float: left;
+}
+
+main section.information:nth-of-type(even) > * {
+    float: right;
 }
 
 main section.information > .code {
     width: 47.5%;
 }
 
-main section.information > .code:first-child h3 {
-    margin-left: 0;
-    margin-right: .25em;
+main section.information:nth-of-type(odd) > .code {
+    margin-right: 5%;
+}
+
+main section.information:nth-of-type(even) > .code {
+    margin-left: 5%;
+}
+
+main section.information:nth-of-type(even) > .code h3 {
     text-align: right;
+    margin-right: .25em;
+}
+
+main section.information:nth-of-type(even) > .code h3 {
+    text-align: left;
+    margin-left: .25em;
 }
 
 main section.information > .code h3 {
@@ -374,11 +397,10 @@ code {
     display: block;
     position: relative;
     color: white;
-    font-family: "Barlow", sans-serif;
-    font-size: .9em;
+    font-size: .75em;
+    font-family: "Droid Sans", monospace;
     line-height: 1.65em;
     text-align: left;
-    letter-spacing: .05em;
     background-color: rgb(158, 119, 255);
     border-radius: 1em;
 }
@@ -386,7 +408,7 @@ code {
 code.major {
     display: inline-block;
     width: auto;
-    font-size: 1em;
+    font-size: .85em;
     background-image: linear-gradient(rgb(158, 119, 255) 0%, rgb(93, 60, 246) 200%);
     box-shadow: 0 .5em 1em 0 rgba(93, 60, 246, .35);
 }
@@ -455,7 +477,7 @@ code.major xmp {
 code xmp {
     margin: 0;
     padding: 1.5em 2.25em;
-    font-family: "Barlow", sans-serif;
+    font-family: "Droid Sans", monospace;
     border-radius: 1em;
 }
 
@@ -466,4 +488,111 @@ code + button {
     border: 4px solid rgb(93, 60, 246);
     border-radius: .5em;
     box-shadow: 0 .15em .05em 0 rgba(93, 60, 246, .15);
+}
+
+/* Responsive Metrics */
+
+/* Window Width < 480 */
+@media only screen and (max-width: 479px) {
+    body {
+        font-size: 13px;
+    }
+    .container {
+        width: 90%;
+    }
+    section.information > * {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 4em !important;
+    }
+    section.information h3 {
+        text-align: center !important;
+    }
+    section.indication .note {
+        width: 100%;
+    }
+}
+
+/* 480 ≤ Window Width < 768 */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        width: 75%;
+    }
+    section.information > * {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 4em !important;
+    }
+    section.information h3 {
+        text-align: center !important;
+    }
+    section.indication .note {
+        width: 100%;
+    }
+}
+
+/* 768 ≤ Window Width < 1024 */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 15px;
+    }
+    .container {
+        width: 90%;
+    }
+}
+
+/* 1024 ≤ Window Width < 1152 */
+@media only screen and (min-width: 1024px) and (max-width: 1151px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        width: 85%;
+    }
+}
+
+/* 1152 ≤ Window Width < 1280 */
+@media only screen and (min-width: 1152px) and (max-width: 1280px) {
+    body {
+        font-size: 17px;
+    }
+    .container {
+        width: 80%;
+    }
+}
+
+/* 1280 ≤ Window Width < 1440 */
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+    body {
+        font-size: 18px;
+    }
+    .container {
+        width: 75%;
+    }
+}
+
+/* 1440 ≤ Window Width < 1680 */
+@media only screen and (min-width: 1440px) and (max-width: 1679px) {
+    body {
+        font-size: 19px;
+    }
+}
+
+/* 1680 ≤ Window Width */
+@media only screen and (min-width: 1680px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+/* 1920 ≤ Window Width */
+@media only screen and (min-width: 1920px) {
+    body {
+        font-size: 21px;
+    }
 }
