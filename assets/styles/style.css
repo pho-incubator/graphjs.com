@@ -46,6 +46,7 @@ button {
     text-transform: lowercase;
     letter-spacing: -.035em;
     border: none;
+    background-color: transparent;
     outline: none;
     cursor: pointer !important;
     transition: opacity .5s ease;
@@ -299,10 +300,52 @@ section.promotion p {
     font-size: 1.2em;
 }
 
-section.promotion input {
+section.promotion form {
+    overflow: hidden;
+    position: relative;
     width: 20em;
     height: 3em;
+    margin: 0 auto;
     margin-top: 1em;
+    border-radius: .25em;
+    box-shadow: 0 .25em .5em 0 rgba(0, 0, 0, .05);
+    transition: box-shadow .35s ease;
+}
+
+section.promotion form:hover {
+    box-shadow: 0 .5em 1em 0 rgba(0, 0, 0, .25);
+}
+
+section.promotion form:focus {
+    box-shadow: 0 .5em 1em 0 rgba(0, 0, 0, .25);
+}
+
+section.promotion form button {
+    display: inline-block;
+    position: absolute;
+    opacity: .65;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3em;
+    height: 100%;
+    border: none;
+    outline: none;
+    transition: all .35s ease;
+}
+
+section.promotion form button img {
+    width: auto;
+    height: 1.5em;
+}
+
+section.promotion form:hover button {
+    opacity: 1;
+}
+
+section.promotion form input {
+    width: 100%;
+    height: 100%;
     padding-left: 1em;
     padding-right: 4em;
     font-size: .9em;
@@ -311,24 +354,14 @@ section.promotion input {
     background-color: white;
     border: none;
     border-radius: .25em;
-    box-shadow: 0 .25em .5em 0 rgba(0, 0, 0, .05);
-    transition: box-shadow .35s ease;
 }
 
-section.promotion input:hover {
-    box-shadow: 0 .5em 1em 0 rgba(0, 0, 0, .25);
-}
-
-section.promotion input:focus {
-    box-shadow: 0 .5em 1em 0 rgba(0, 0, 0, .25);
-}
-
-section.promotion input::placeholder {
+section.promotion form input::placeholder {
     opacity: .5;
     transition: opacity .35 ease;
 }
 
-section.promotion input:focus::placeholder {
+section.promotion form input:focus::placeholder {
     opacity: .25;
 }
 
