@@ -34,9 +34,13 @@
 		<link href="assets/styles/reset.css" type="text/css" rel="stylesheet" />
 		<link href="assets/styles/style.css" type="text/css" rel="stylesheet" />
 		<script src="assets/scripts/script.js"></script>
-		<link rel="stylesheet" href="assets/styles/highlight.css">
-		<script src="assets/scripts/highlight.js"></script>
-		<script>hljs.initHighlightingOnLoad();</script>
+		<style>
+		pre {
+			padding: 1em;
+			text-align: left;
+			font-size: 0.8em;
+		}
+		</style>
 	</head>
 	<body>
 		<nav>
@@ -55,13 +59,11 @@
 			<div class="container">
 				<section class="introduction">
 					<code class="major">
-<!-- Code begins -->
 <xmp><script src="pho.js"></script>
 <script>
   //Initiate with your ID
   Pho.init("16D58CF2-FD88-4A49-972B-6F60054BF023");
 </script></xmp>
-<!-- Code ends -->
 					</code>
 					<button style="display:none;">Start Yours</button>
 				</section>
@@ -73,13 +75,11 @@
 							in single line of code!
 						</h3>
 						<pre class="prettyprint lang-html linenums">
-<!-- Code begins -->
 <xmp>//Login Box
 <graphjs-auth default="login" />
 
 //Authentication State
 <graphjs-state /></xmp>
-<!-- Code ends -->
 						</pre>
 					</div>
 					<div class="preview">
