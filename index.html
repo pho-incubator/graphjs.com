@@ -33,13 +33,9 @@
 	    <link rel="apple-touch-icon" href="assets/images/identity/icon_touch.png">
 		<link href="assets/styles/reset.css" type="text/css" rel="stylesheet" />
 		<link href="assets/styles/style.css" type="text/css" rel="stylesheet" />
+		<link href="assets/styles/highlight.css" type="text/css" rel="stylesheet" />
 		<script src="assets/scripts/script.js"></script>
 		<style>
-		pre {
-			padding: 1em;
-			text-align: left;
-			font-size: 0.8em;
-		}
 		</style>
 	</head>
 	<body>
@@ -59,11 +55,13 @@
 			<div class="container">
 				<section class="introduction">
 					<code class="major">
-<xmp><script src="pho.js"></script>
+<!-- Code begins -->
+<pre class="prettyprint lang-html linenums"><xmp><script src="pho.js"></script>
 <script>
   //Initiate with your ID
   Pho.init("16D58CF2-FD88-4A49-972B-6F60054BF023");
-</script></xmp>
+</script></xmp></pre>
+<!-- Code ends -->
 					</code>
 					<button style="display:none;">Start Yours</button>
 				</section>
@@ -74,13 +72,15 @@
 							<br />
 							in single line of code!
 						</h3>
-						<pre class="prettyprint lang-html linenums">
-<xmp>//Login Box
+						<code>
+<!-- Code begins -->
+<pre class="prettyprint lang-html linenums"><xmp><!-- Login Box -->
 <graphjs-auth default="login" />
 
-//Authentication State
-<graphjs-state /></xmp>
-						</pre>
+<!-- Authentication State -->
+<graphjs-state /></xmp></pre>
+<!-- Code ends -->
+						</code>
 					</div>
 					<div class="preview">
 						<div class="slider" data-simple-slider>
@@ -92,51 +92,23 @@
 						</div>
 					</div>
 				</section>
-				<!-- GROUPS
-				<section class="information">
-					<div class="code">
-						<h3>
-							Create groups and
-							<br />
-							embed members widget!
-						</h3>
-						<code>
-
-<xmp><graphjs-group-members>
-  <graphjs-profile-card id="7346217961" />
-  <graphjs-profile-card id="8768732124" />
-  <graphjs-profile-card id="1236217836" />
-</graphjs-group-members></xmp>
-
-						</code>
-					</div>
-					<div class="preview">
-						<div class="slider" data-simple-slider>
-							<img src="assets/images/content/auth-state_inline.png" />
-							<img src="assets/images/content/auth-state_standalone.png" />
-							<img src="assets/images/content/auth-register.png" />
-							<img src="assets/images/content/auth-login.png" />
-						</div>
-					</div>
-				</section>
-				-->
 				<section class="information">
 					<div class="code">
 						<h3>
 							Easily create profiles!
 						</h3>
-						<pre class="prettyprint lang-html linenums">
+						<code>
 <!-- Code begins -->
-<xmp><script>
+<pre class="prettyprint lang-html linenums"><xmp><script>
   Pho.setProfile(
     'KarenMorgan',
     'karenmorgan@geemail.com',
-    'I am a badass UX designer working in tech.',
+    'I am a badass UX designer!',
     '06/10/1990'
   );
-</script></xmp>
+</script></xmp></pre>
 <!-- Code ends -->
-						</pre>
+						</code>
 					</div>
 					<div class="preview">
 						<div class="slider" data-simple-slider>
@@ -153,11 +125,11 @@
 							<br />
 							to any page you want!
 						</h3>
-						<pre class="prettyprint lang-html linenums">
+						<code>
 <!-- Code begins -->
-<xmp><graphjs-comments max="20" /></xmp>
+<pre class="prettyprint lang-html linenums"><xmp><graphjs-comments max="20" /></xmp></pre>
 <!-- Code ends -->
-						</pre>
+						</code>
 					</div>
 					<div class="preview">
 						<div class="slider" data-simple-slider>
@@ -171,11 +143,11 @@
 						<h3>
 							Add messaging between users!
 						</h3>
-						<pre class="prettyprint lang-html linenums">
+						<code>
 <!-- Code begins -->
-<xmp><graphjs-messages /></xmp>
+<pre class="prettyprint lang-html linenums"><xmp><graphjs-messages /></xmp></pre>
 <!-- Code ends -->
-						</pre>
+						</code>
 					</div>
 					<div class="preview">
 						<div class="slider" data-simple-slider>
@@ -189,11 +161,11 @@
 						<h3>
 							Create a community forum!
 						</h3>
-						<pre class="prettyprint lang-html linenums">
+						<code>
 <!-- Code begins -->
-<xmp><graphjs-forum /></xmp>
+<pre class="prettyprint lang-html linenums"><xmp><graphjs-forum /></xmp></pre>
 <!-- Code ends -->
-						</pre>
+						</code>
 					</div>
 					<div class="preview">
 						<div class="slider" data-simple-slider>
@@ -210,16 +182,16 @@
 							<br />
 							with user interaction.
 						</h3>
-						<pre class="prettyprint lang-html linenums">
+						<code>
 <!-- Code begins -->
-<xmp>//Buttons on any page
+<pre class="prettyprint lang-html linenums"><xmp><!-- Buttons on any page -->
 <graphjs-bookmark-button />
 
-//List favorite site content
+<!-- List favorite site content -->
 <graphjs-bookmark-list type="global" />
-</xmp>
+</xmp></pre>
 <!-- Code ends -->
-						</pre>
+						</code>
 					</div>
 					<div class="preview">
 						<div class="slider" data-simple-slider>
@@ -239,26 +211,32 @@
 						</div>
 						<div id="views">
 <!-- Code begins -->
-<xmp class="active"><script src="pho.js"></script>
+<pre class="active prettyprint lang-html linenums"><xmp><script src="pho.js"></script>
 <script>
   //Initiate with your ID
   Pho.init("26D58CF2-FD88-4A49-972B-6F60054B");
-</script></xmp>
-<xmp><script src="pho.js"></script>
+</script></xmp></pre>
+<!-- Code ends -->
+<!-- Code begins -->
+<pre class="prettyprint lang-html linenums"><xmp><script src="pho.js"></script>
 <script>
   //Initiate with your ID
   Pho.init("36D58CF2-FD88-4A49-972B-6F60054B");
-</script></xmp>
-<xmp><script src="pho.js"></script>
+</script></xmp></pre>
+<!-- Code ends -->
+<!-- Code begins -->
+<pre class="prettyprint lang-html linenums"><xmp><script src="pho.js"></script>
 <script>
   //Initiate with your ID
   Pho.init("46D58CF2-FD88-4A49-972B-6F60054B");
-</script></xmp>
-<xmp><script src="pho.js"></script>
+</script></xmp></pre>
+<!-- Code ends -->
+<!-- Code begins -->
+<pre class="prettyprint lang-html linenums"><xmp><script src="pho.js"></script>
 <script>
   //Initiate with your ID
   Pho.init("56D58CF2-FD88-4A49-972B-6F60054B");
-</script></xmp>
+</script></xmp></pre>
 <!-- Code ends -->
 						</div>
 					</code>
@@ -295,7 +273,7 @@
 				built with love by <a href="http://www.groups-inc.com" target="_blank">GROU.PS Inc.</a>
 			</div>
 		</footer>
-		<script src="https://rawgit.com/ruyadorno/simple-slider/master/dist/simpleslider.min.js"></script>
+		<script src="assets/scripts/slider.js"></script>
 		<script>
 			var sliders = document.getElementsByClassName('slider');
 			for(i = 0; i < sliders.length; i++) {
@@ -310,6 +288,6 @@
 				});
 			}
 		</script>
-		<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=html&amp;skin=sons-of-obsidian"></script>
+		<script src="assets/scripts/syntax.js?lang=html"></script>
 	</body>
 </html>
