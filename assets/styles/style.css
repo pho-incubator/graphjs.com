@@ -284,7 +284,7 @@ section.promotion::before {
     width: 7.5em;
     height: 8.5em;
     margin-left: -3.75em;
-    background-image: url(../images/identity/mascot.png);
+    background-image: url(http://res.cloudinary.com/graphjs/image/upload/graphjs.com/identity/mascot.png);
     background-position: top center;
     background-size: cover;
     position: absolute;
