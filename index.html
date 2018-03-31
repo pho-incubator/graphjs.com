@@ -205,46 +205,46 @@
 					<h2>and even more...</h2>
 					<code class="major tabbed">
 						<div id="tabs" class="options">
-							<a onclick="setActiveTab(1)" class="active">Newsfeed</a>
-							<a onclick="setActiveTab(2)">Groups</a>
-							<a onclick="setActiveTab(3)">Messages</a>
-							<a onclick="setActiveTab(4)">Robust APIs</a>
+							<a onclick="setActiveTab(1)" class="active">Groups</a>
+							<a onclick="setActiveTab(2)">Follow</a>
+							<a onclick="setActiveTab(3)">Modal Box</a>
 						</div>
 						<div id="views">
 <!-- Code begins -->
 <pre class="active prettyprint lang-html linenums"><xmp><script src="pho.js"></script>
 <script>
-  //Initiate with your ID
-  Pho.init("26D58CF2-FD88-4A49-972B-6F60054B");
+  Pho.createGroup(
+    'Freelance Web Designers', //Title
+    'Design, code, publish, repeat!', //Description
+    'http://path-to-cover.com/cover.png' //Cover
+  );
 </script></xmp></pre>
 <!-- Code ends -->
 <!-- Code begins -->
 <pre class="prettyprint lang-html linenums"><xmp><script src="pho.js"></script>
 <script>
-  //Initiate with your ID
-  Pho.init("36D58CF2-FD88-4A49-972B-6F60054B");
+  //Follow a user (using their id)
+  Pho.follow('4b688921975b3f46544c487d268e24d6');
+  
+  //Unfollow a user (using their id)
+  Pho.unfollow('4b688921975b3f46544c487d268e24d6');
 </script></xmp></pre>
 <!-- Code ends -->
 <!-- Code begins -->
 <pre class="prettyprint lang-html linenums"><xmp><script src="pho.js"></script>
 <script>
-  //Initiate with your ID
-  Pho.init("46D58CF2-FD88-4A49-972B-6F60054B");
-</script></xmp></pre>
-<!-- Code ends -->
-<!-- Code begins -->
-<pre class="prettyprint lang-html linenums"><xmp><script src="pho.js"></script>
-<script>
-  //Initiate with your ID
-  Pho.init("56D58CF2-FD88-4A49-972B-6F60054B");
+  Pho.showAlert({
+    title: 'Login Required',
+    text: 'You have to login to see this content!',
+    customoption: 'Go to Login'
+  });
 </script></xmp></pre>
 <!-- Code ends -->
 						</div>
 					</code>
+					<p>Ready to see it in action? <a href="http://docs.graphjs.com">Check out the docs.</a></p>
 				</section>
 			</div>
-			<p>&nbsp;</p>
-			<h3>&amp; check out our docs for the state of the art</h3>
 		</main>
 		<section class="promotion">
 			<div class="container">
@@ -290,7 +290,7 @@
 					init: 100,
 					show: 0,
 					end: -100,
-					unit: '%',
+					unit: '%'
 				});
 			}
 		</script>
